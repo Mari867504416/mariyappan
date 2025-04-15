@@ -1,4 +1,4 @@
-const Officer = require('./models/Officer');
+const Officer = require('../models/Officer');
 const jwt = require('jsonwebtoken');
 const { promisify } = require('util');
 const AppError = require('../utils/appError');
