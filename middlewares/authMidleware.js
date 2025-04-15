@@ -1,4 +1,5 @@
 const AppError = require('../utils/appError');
+app.use(cors());
 
 // Role-based access control (if needed in future)
 exports.restrictTo = (...roles) => {
