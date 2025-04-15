@@ -1,5 +1,5 @@
 {
-  "name": "your-app-name",
+  "name": "your-app",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -7,17 +7,15 @@
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
-"engines": {
-  "node": "18.x",
-  "npm": "9.x"
-},
+  "engines": {
+    "node": "18.x",
+    "npm": "9.x"
+  },
   "dependencies": {
     "express": "^4.18.2",
     "mongoose": "^7.4.3",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "morgan": "^1.10.0"
   }
-}
-"dependencies": {
-  "morgan": "^1.10.0"
 }
