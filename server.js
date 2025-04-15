@@ -2,18 +2,13 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const morgan = require('morgan');
-const authRoutes = require('./routes/authRoutes');
-const officerRoutes = require('./routes/officerRoutes');
-const connectDB = require('./config/db');
-const morgan = require('morgan');
-
+const morgan = require('morgan'); // ONLY ONCE
 const app = express();
 
 // Middleware
-app.use(cors());
-app.use(express.json());
 app.use(morgan('dev'));
+app.use(cors());
+// ... rest of your code
 
 // Database Connection
 connectDB();
