@@ -1,6 +1,6 @@
 const Officer = require('../models/Officer');
 const AppError = require('../utils/appError');
-
+const AppError = require('../utils/appError');
 exports.activateOfficer = async (req, res, next) => {
   try {
     const { username, activationKey } = req.body;
