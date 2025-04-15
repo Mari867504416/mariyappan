@@ -47,3 +47,9 @@ exports.getOfficerProfile = async (req, res, next) => {
     next(err);
   }
 };
+// At the bottom of officerController.js
+module.exports = {
+  activateOfficer,
+  getOfficerProfile
+  // other exported functions...
+};
