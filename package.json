@@ -19,3 +19,6 @@
     "validator": "^13.9.0"
   }
 }
+"dependencies": {
+  "morgan": "^1.10.0"
+}
