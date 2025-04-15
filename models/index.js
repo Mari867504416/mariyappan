@@ -37,3 +37,6 @@ module.exports = {
     console.log('MongoDB disconnected');
   }
 };
+module.exports = {
+  Officer: require('./Officer')
+};
