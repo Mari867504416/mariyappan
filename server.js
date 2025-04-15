@@ -1,19 +1,23 @@
 require('dotenv').config();
 const express = require('express');
-const connectDB = require('./config/db'); // Add this line
+const mongoose = require('mongoose');
+const cors = require('cors'); // <-- Add this line
 const morgan = require('morgan');
+const connectDB = require('./config/db');
 
 // Connect to database
 connectDB();
 
 const app = express();
-// ... rest of your code
-
 
 // Middleware
+app.use(cors()); // <-- Use it here
+app.use(express.json());
 app.use(morgan('dev'));
-app.use(cors());
-// ... rest of your code
+
+// ... rest of your server code
+
+
 
 // Database Connection
 connectDB();
