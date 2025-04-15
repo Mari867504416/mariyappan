@@ -1,28 +1,22 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors'); // <-- Add this line
-const morgan = require('morgan');
+const cors = require('cors');
+const morgan = require('morgan'); // <-- Only declare once
 const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
-const morgan = require('morgan');
+const officerRoutes = require('./routes/officerRoutes'); // <-- Make sure this is required
 
-// Connect to database
-connectDB();
-
+// Initialize app
 const app = express();
 
+// Connect to database (only need to call once)
+connectDB();
+
 // Middleware
-app.use(cors()); // <-- Use it here
+app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
-
-// ... rest of your server code
-
-app.use('/api/auth', authRoutes); 
-
-// Database Connection
-connectDB();
 
 // Routes
 app.use('/api/auth', authRoutes);
@@ -43,5 +37,3 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-// Connect to database
-connectDB();
