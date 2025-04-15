@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: officer-auth-backend
+    env: node
+    build:
+      npm install
+    start: npm start
+    envVars:
+      - key: MONGODB_URI
+        fromDatabase:
+          name: officer-auth-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 90d
+      - key: ADMIN_ACTIVATION_KEY
+        value: Admin123
+      - key: PORT
+        value: 5000
+
+databases:
+  - name: officer-auth-db
+    plan: free
+    databaseName: officer-auth
+    user: officer-admin
