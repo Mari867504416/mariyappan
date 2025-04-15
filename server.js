@@ -6,6 +6,7 @@ const morgan = require('morgan');
 const authRoutes = require('./routes/authRoutes');
 const officerRoutes = require('./routes/officerRoutes');
 const connectDB = require('./config/db');
+const morgan = require('morgan');
 
 const app = express();
 
