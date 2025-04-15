@@ -18,7 +18,7 @@ app.use(morgan('dev'));
 
 // ... rest of your server code
 
-
+app.use('/api/auth', authRoutes); 
 
 // Database Connection
 connectDB();
