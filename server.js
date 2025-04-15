@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors'); // <-- Add this line
 const morgan = require('morgan');
 const connectDB = require('./config/db');
+const authRoutes = require('./routes/authRoutes');
 
 // Connect to database
 connectDB();
