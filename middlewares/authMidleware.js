@@ -1,4 +1,5 @@
 const AppError = require('../utils/appError');
+app.use(morgan('dev'));  // 'dev' format shows concise output
 app.use(cors());
 
 // Role-based access control (if needed in future)
