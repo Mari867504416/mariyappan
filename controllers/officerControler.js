@@ -1,6 +1,5 @@
 const Officer = require('../models/Officer');
 const AppError = require('../utils/appError');
-const officerController = require('../controllers/OfficerController');
 const logger = require('../utils/logger'); // Optional: for better logging
 
 // Constants for error messages
